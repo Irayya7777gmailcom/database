@@ -29,7 +29,7 @@ def entry():
         tab=mycursor.fetchall()
         mycursor.execute("show databases")
         db=mycursor.fetchall()
-        #e=request.form['table']
+        
         mycursor.execute("desc {}".format(e))
     
         myre=mycursor.fetchall()
@@ -42,10 +42,4 @@ def entry():
        print("enter valid deatils of your database")
 
    
-@app.route("/display")
-def display():
-    
-    mycurs=request.args['mycurs']        
-    return render_template("disp",mycurso=mycurs)
 
-app.run(debug=True)
