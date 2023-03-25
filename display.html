@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        .table{
+            border: 2px solid green;
+            width: 200px;
+            height: 500px;
+            margin: auto;
+            }
+
+         .db{
+            
+            background-color: ;
+            word-wrap: break-word;
+            color: darkred;
+            display: inline-block;
+            margin-left: 300px;
+         }
+         .inlin{
+            border: 2px solid green;
+            width: 100%;
+            height: 300px;
+            background-color: yellow;
+            
+         }
+        
+        
+        header{
+            width: 100%;
+            height: 80px;
+            background-color: greenyellow;
+            color: red;
+            text-align: center;
+        }
+        footer{width: 100%;
+            height: 80px;
+            background-color: greenyellow;
+            color: red;
+            text-align: center;
+
+        }
+    </style>
+</head>
+<body>
+    <header><h1>YOUR DATA</h1></header>
+    <div class="inlin">
+    <div class="db">
+     <bold><span style="border: 2px solid rgb(245, 245, 245);"><h3>ALL TABLES</h3></span></bold>   
+    {% for k in tab %}
+    <p>{{k}}</p>
+    {% endfor %}
+    </div>
+    
+
+    
+    <div class="db">
+        <bold><span style="border: 2px solid rgb(245, 245, 245);"><h3>ALL DATABASES</h3></span></bold>
+        {% for l in db %}
+        <p>{{l}}</p>
+        {% endfor %}
+    </div>
+    </div>
+    
+    
+     <h2 style="text-align: center;">TABLE</h2>
+    <table border="2px" class="table" cellspacing="3px" cellpadding="4px">
+        
+        <tr>
+            {% for i in my %}
+            <td>{{i[0]}}</td>
+            <!-- <td>{{i[1]}}</td>
+            <td>{{i[2]}}</td>
+            <td>{{i[3]}}</td>
+            <td>{{i[4]}}</td>
+            <td>{{i[5]}}</td>
+            <td>{{i[6]}}</td> -->
+            {% endfor %}
+        </tr>
+        {% for i in my1 %}
+        <tr>
+            {% for j in range(0,c) %}
+            <td>{{i[j]}}</td>
+             <!-- <td>{{i[1]}}</td>
+            <td>{{i[2]}}</td>
+            <td>{{i[3]}}</td>
+            <td>{{i[4]}}</td>
+            <td>{{i[5]}}</td>
+            <td>{{i[6]}}</td> 
+             -->
+             {% endfor %}
+        </tr>
+        {% endfor %}
+       
+        
+    </table>
+    <footer><a href="/loginform"><h3>to change table name and database click here</h3></a></footer>
+</body>
+</html>
